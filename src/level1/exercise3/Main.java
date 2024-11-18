@@ -1,11 +1,11 @@
 package level1.exercise3;
 
-import java.util.stream.Stream;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Stream<String> stringStream = Stream.of("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+        List<String> months = List.of("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
 
-        stringStream.forEach(System.out::println);
+        months.forEach(month -> System.out.println(month));
     }
 }

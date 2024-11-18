@@ -1,12 +1,19 @@
 package level1.exercise1;
 
-import java.util.stream.Stream;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
-    public static void main(String[] args) {
-        Stream<String> stringStream = Stream.of("Michael", "Jordan", "Kobe", "Bryant")
-                .filter(s -> s.contains("o"));
+    public static List<String> filterStringsWithO(List<String> strings) {
+        return strings.stream()
+                .filter(s -> s.contains("o"))
+                .collect(Collectors.toList());
+    }
 
-        stringStream.forEach(System.out::println);
+    public static void main(String[] args) {
+        List<String> strings = List.of("Michael", "Jordan", "Kobe", "Bryant");
+
+        List<String> output = filterStringsWithO(strings);
+        System.out.println("Output: " + output);
     }
 }
