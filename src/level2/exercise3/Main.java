@@ -2,7 +2,6 @@ package level2.exercise3;
 
 public class Main {
     public static void main(String[] args) {
-
         Operation addition = (a, b) -> a + b;
         Operation subtraction = (a, b) -> a - b;
         Operation multiplication = (a, b) -> a * b;

@@ -1,7 +1,6 @@
 package level1.exercise6;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -10,12 +9,6 @@ public class Main {
                 "Leo", "10", "Cristiano Ronaldo", "9", "Neymar Jr", "1234", "Kylian Mbappé", "55555", "Robert Lewandowski"
         ));
 
-        List<String> sortedList = list.stream()
-                .sorted(Comparator.comparingInt(String::length))
-                .toList();
-
-        sortedList.forEach(element -> {
-            System.out.println(element);
-        });
+        ListManager.printList(list);
     }
 }
